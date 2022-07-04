@@ -16,7 +16,7 @@ form {
 .navbar {
     width: 600px;
     height:300px;
-    background: #FFFAE4;
+    background-color: #FFFAE4;
     border-radius: 200px;
     display: table;
     margin: auto;
@@ -35,7 +35,7 @@ form {
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    background: #EDE3CA;
+    background-color: #EDE3CA;
     margin: 10px;
 }
 
@@ -67,8 +67,9 @@ form {
 
 }
 
-.textbox-full {
-    opacity: 0.91;
+.panel-full {
+    /* // opacity: 0.91; */
+
     width: 80%;
     height: 80%;
     position: absolute;
@@ -76,7 +77,52 @@ form {
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    border-radius: 40px;
+    text-align: left;
 
-    text-align: center;
+    display: table;
 }
 
+.titlebox {
+    opacity: 1;
+    width: 300px;
+    height: 100px;
+    border-radius: 200px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;  
+
+    position: absolute;
+    left: -40px;
+    top: -40px;
+    transform: rotate(-13deg);
+}
+
+.textbox {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10;
+    
+}
+
+
+
+
+
+@font-face {
+    font-family: 'animalCrossing';
+    src: url(fonts/nintendoP_Humming-E_002pr.otf);
+}
+
+p2 {
+    font-size: 31pt;
+    font-family: animalCrossing;
+    color: #FFF;
+}
+
+p {
+    font-size: 15pt;
+    font-family: animalCrossing;
+    color: #FFF;
+    line-height: 1.5;
+}
