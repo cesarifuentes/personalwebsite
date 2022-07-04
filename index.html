@@ -6,35 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cesar Fuentes</title>
     <link rel="stylesheet" href="./styles.css" />
-    <script type="module" src="index.js"></script>
-
-
-    <div class="ytvideo">
-      <iframe width="0" height="0" src="https://www.youtube.com/embed/jk8_YHtOhFA?controls=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-
+    <script type="module" src="element.js"></script>
+    <script src="index.js"></script>
   </head>
-  <body>
+  <body onload="ShowPanel('panel-1')">
 
-    <div class="intro">
-
-    </div>
+     <!-- TODO: Intro  -->
 
     <div class="left-side">
-      <navbar-template></navbar-template>      
+      <navbar-template></navbar-template>     
+
+       <!-- TODO: Character Animation -->
       <div class="animation"></div>
+
     </div>
 
-    <div class="right-side" style="background-image: url('patterns/orange.png');">
-      <div class="panel-full" style="background-color: #FFCC59;">
-        <div class="titlebox" style="background-color: #f66c21;"><p2>Home</p2></div>
-        <div class="textbox">
-          <br><br><br><br>
-          <p>Hello! My name is <mark style="color: #f66c21; background:none;">Cesar Fuentes</mark>. I am a senior computer science student at Texas A&M University. <br><br> Have fun checking out my Animal Crossing inspired website!</p>
-        </div>
-      </div>
+    <div class="right-side">
+
+      <panel-home id="panel-1"></panel-home>
+      <panel-education id="panel-2"></panel-education>
+      <panel-work id="panel-3"></panel-work>
+      <panel-projects id="panel-4"></panel-projects>
+      <panel-leader id="panel-5"></panel-leader>
+      <panel-skills id="panel-6"></panel-skills>
+      <panel-contact id="panel-7"></panel-contact>
+      <panel-about id="panel-8"></panel-about>
+
     </div>
 
   </body>
 </html>
+

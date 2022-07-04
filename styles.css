@@ -29,8 +29,8 @@ form {
 }
 
 .navbar {
-    width: 600px;
-    height:300px;
+    width: 650px;
+    height: 270px;
     background-color: #FFFAE4;
     border-radius: 200px;
     display: table;
@@ -58,9 +58,11 @@ form {
     background-color: #2BA49F;
 
     /* TODO: change size slightly */
+}
 
 
-
+.btn:root {
+    background-color: #2BA49F;
 }
 
 
@@ -73,11 +75,10 @@ form {
     right: 50%; 
     width: 50%; 
     height: 100%;
-    background-position: 0 0; 
-    background-repeat:no-repeat; 
-    background-size: cover;
+    /* background-position: 0 0; 
+    background-repeat: no-repeat; 
+    background-size: cover; */
 }
-
 
 .right-side {  
     position: absolute;
@@ -85,12 +86,59 @@ form {
     left: 50%; 
     width: 50%; 
     height: 100%;
-    background-position: 0 0; 
-    background-repeat:no-repeat; 
-    background-size: cover;
-
-
 }
+
+.wallpaper {  
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: auto 100%;
+    /*adjust s value for speed*/
+    animation: animatedBackground 0s linear infinite; 
+    /* 500000ms */
+}
+
+
+@keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -1000px;
+    }
+}
+
+
+
+.panel-partial {
+    width: 80%;
+    height: 70%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 40px;
+    text-align: left;
+
+    display: table;
+}
+
+.btn-long{
+    opacity: 1;
+    width: 300px;
+    height: 100px;
+    border-radius: 200px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;  
+}
+
+
 
 .panel-full {
     /* // opacity: 0.91; */
@@ -164,22 +212,6 @@ p, li, .tooltip {
 }
 
 
-/* 
-.ytvideo {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    height: 0;
-    width: 0;
-}
-
-.ytvideo iframe{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-} */
 
 
 /* NAVIGATION BAR ------------------------------------------------- */
@@ -234,3 +266,11 @@ p, li, .tooltip {
   .tooltip:hover:before, .tooltip:hover:after {
     display:block;
   }
+
+
+
+
+li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
