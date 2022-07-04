@@ -58,7 +58,14 @@ form {
     background-color: #2BA49F;
 
     /* TODO: change size slightly */
+
+
+
 }
+
+
+
+
 
 .left-side {  
     position: absolute;
@@ -140,7 +147,7 @@ p2 {
     color: #FFF;
 }
 
-p, li {
+p, li, .tooltip {
     font-size: 15pt;
     font-family: animalCrossing;
     color: #FFF;
@@ -173,3 +180,36 @@ p, li {
     width: 100%;
     height: 100%;
 } */
+
+
+
+.tooltip {
+    position:relative; /* making the .tooltip span a container for the tooltip text */
+}
+
+.tooltip:before {
+    content: attr(data-text); /* here's the magic */
+    position:absolute;
+    
+    /* vertically center */
+    top:50%;
+    transform:translateY(-50%);
+    
+    /* move to bottom */
+    top:100%;
+    margin-top:15px; /* and add a small left margin */
+    
+    /* basic styles */
+    width:200px;
+    padding:10px;
+    border-radius:10px;
+    background:#2BA49F;
+    color: #fff;
+    text-align:center;
+  
+    display:none; /* hide by default */
+  }
+
+  .tooltip:hover:before {
+    display:block;
+  }

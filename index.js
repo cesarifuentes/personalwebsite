@@ -4,7 +4,7 @@ class MyNavbar extends HTMLElement {
         this.innerHTML = `
         <div class="navbar">
             <div class="buttons">
-            <form action="/index.html"><input type="image" class="btn" src="icons/Furniture_NH_Inv_Icon.png" /></form>
+            <span data-text="Home" class="tooltip">    <form action="/index.html"><input type="image" class="btn" src="icons/Furniture_NH_Inv_Icon.png" /></form>   </span> 
             <form action="/education.html"><input type="image" class="btn" src="icons/Pocketbook_NH_Inv_Icon.png" /></form>
             <form action="/work.html"><input type="image" class="btn" src="icons/Construction_Helmet_NH_Inv_Icon.png" /></form>
             <form action="/projects.html"><input type="image" class="btn" src="icons/Dumbbell_NH_Inv_Icon.png" /></form>
@@ -20,3 +20,5 @@ class MyNavbar extends HTMLElement {
 }
 customElements.define('navbar-template', MyNavbar)
 
+
+  
