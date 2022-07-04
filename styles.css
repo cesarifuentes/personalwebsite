@@ -1,4 +1,19 @@
 /* CSS variables ------------------------------------------------- */
+
+html{ 
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none; 
+}
+p,a,h1,h2,h3,h4,h5,h6,div,br,li,td,article{
+    -o-user-select: text;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    user-select: text;
+}
+
+
 /* global styles ------------------------------------------------- */
 
 :root {
@@ -39,13 +54,18 @@ form {
     margin: 10px;
 }
 
+.btn:hover {
+    background-color: #2BA49F;
+
+    /* TODO: change size slightly */
+}
+
 .left-side {  
     position: absolute;
     top: 0;
     right: 50%; 
     width: 50%; 
     height: 100%;
-    /* background-image: url('patterns/blue.png'); */
     background-position: 0 0; 
     background-repeat:no-repeat; 
     background-size: cover;
@@ -58,11 +78,9 @@ form {
     left: 50%; 
     width: 50%; 
     height: 100%;
-    background-image: url('patterns/orange.png');
     background-position: 0 0; 
     background-repeat:no-repeat; 
     background-size: cover;
-
 
 
 }
@@ -102,7 +120,7 @@ form {
     width: 80%;
     margin: 0 auto;
     margin-top: 10;
-    
+
 }
 
 
@@ -114,15 +132,44 @@ form {
     src: url(fonts/nintendoP_Humming-E_002pr.otf);
 }
 
+
+
 p2 {
     font-size: 31pt;
     font-family: animalCrossing;
     color: #FFF;
 }
 
-p {
+p, li {
     font-size: 15pt;
     font-family: animalCrossing;
     color: #FFF;
     line-height: 1.5;
 }
+
+
+.animation {
+    display: block;
+    height: 502px;
+    width: 522px;
+    background: url("animations/clapping.gif") no-repeat center center;
+    margin: auto;
+}
+
+
+/* 
+.ytvideo {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    width: 0;
+}
+
+.ytvideo iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} */
