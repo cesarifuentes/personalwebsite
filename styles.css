@@ -1,5 +1,65 @@
 /* CSS variables ------------------------------------------------- */
-
-
 /* global styles ------------------------------------------------- */
 
+:root {
+    /* --selected-buton: #2BA49F; */
+}
+  
+body {
+    margin: 0;
+}
+
+form {
+    display: inline;
+}
+
+.navbar {
+    width: 600px;
+    height:300px;
+    background: #FFFAE4;
+    border-radius: 200px;
+    display: table;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.buttons {
+    text-align:center;
+    display:table-cell;
+    vertical-align: middle;
+}
+
+
+.btn {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: #EDE3CA;
+    margin: 10px;
+}
+
+.left-side {  
+    position: absolute;
+    top: 0;
+    right: 50%; 
+    width: 50%; 
+    height: 100%;
+    /* background-image: url('patterns/blue.png'); */
+    background-position: 0 0; 
+    background-repeat:no-repeat; 
+    background-size: cover;
+}
+
+
+.right-side {  
+    position: absolute;
+    top: 0;
+    left: 50%; 
+    width: 50%; 
+    height: 100%;
+    background-image: url('patterns/orange.png');
+    background-position: 0 0; 
+    background-repeat:no-repeat; 
+    background-size: cover;
+}
