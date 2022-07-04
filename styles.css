@@ -182,6 +182,7 @@ p, li, .tooltip {
 } */
 
 
+/* NAVIGATION BAR ------------------------------------------------- */
 
 .tooltip {
     position:relative; /* making the .tooltip span a container for the tooltip text */
@@ -190,26 +191,46 @@ p, li, .tooltip {
 .tooltip:before {
     content: attr(data-text); /* here's the magic */
     position:absolute;
-    
-    /* vertically center */
-    top:50%;
-    transform:translateY(-50%);
-    
-    /* move to bottom */
-    top:100%;
-    margin-top:15px; /* and add a small left margin */
-    
-    /* basic styles */
+    transform:translateX(-20%);
+    z-index: 1;
+    top: 50%;
+
+    margin-top:10px;
+
     width:200px;
     padding:10px;
     border-radius:10px;
     background:#2BA49F;
     color: #fff;
     text-align:center;
-  
-    display:none; /* hide by default */
+    display:none;
   }
 
   .tooltip:hover:before {
+    display:block;
+  }
+
+  .tooltip:after {
+    content: "";
+    position: absolute;
+    
+    /* position tooltip correctly */
+    /* transform:translateX(20%); */
+    /* left:100%; */
+    margin-left:12px;
+
+    /* vertically center */
+    top:50%;
+    transform:translateY(-50%);
+
+
+   
+    /* the arrow */
+    border: 50px solid #000;
+    border-color: transparent transparent #2BA49F transparent;
+    
+    display:none;
+  }
+  .tooltip:hover:before, .tooltip:hover:after {
     display:block;
   }
