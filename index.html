@@ -9,30 +9,27 @@
     <script type="module" src="element.js"></script>
     <script src="index.js"></script>
   </head>
-  <body onload="ShowPanel('panel-1')">
+  <body>
 
      <!-- TODO: Intro  -->
 
     <div class="left-side">
       <navbar-template></navbar-template>     
-
-       <!-- TODO: Character Animation -->
-      <div class="animation"></div>
-
+      <div class="animation"></div> <!-- TODO: Character Animation -->
     </div>
 
-    <div class="right-side">
-
-      <panel-home id="panel-1"></panel-home>
-      <panel-education id="panel-2"></panel-education>
-      <panel-work id="panel-3"></panel-work>
-      <panel-projects id="panel-4"></panel-projects>
-      <panel-leader id="panel-5"></panel-leader>
-      <panel-skills id="panel-6"></panel-skills>
-      <panel-contact id="panel-7"></panel-contact>
-      <panel-about id="panel-8"></panel-about>
-
+    <div class="right-side" id="panels">
+      <div class="panel" id="panel-1"><panel-home ></panel-home></div>
+      <div class="panel" id="panel-2"><panel-education></panel-education></div>
+      <div class="panel" id="panel-3"><panel-work></panel-work></div>
+      <div class="panel" id="panel-4"><panel-projects></panel-projects></div>
+      <div class="panel" id="panel-5"><panel-leader></panel-leader></div>
+      <div class="panel" id="panel-6"><panel-skills></panel-skills></div>
+      <div class="panel" id="panel-7"><panel-contact></panel-contact></div>
+      <div class="panel" id="panel-8"><panel-about></panel-about></div>
     </div>
+
+    <!-- style="display: none;" -->
 
   </body>
 </html>

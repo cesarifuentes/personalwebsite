@@ -274,3 +274,12 @@ li:not(:last-child) {
     margin-bottom: 20px;
 }
 
+
+
+/* .panel {
+    display: none;
+} */
+
+.hide {
+    display: none;
+}
