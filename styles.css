@@ -14,6 +14,7 @@ p,a,h1,h2,h3,h4,h5,h6,div,br,li,td,article{
 }
 
 
+
 /* global styles ------------------------------------------------- */
 
 :root {
@@ -37,6 +38,8 @@ form {
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
+
+
 }
 
 .buttons {
@@ -97,9 +100,11 @@ form {
     background-repeat: repeat;
     background-position: 0 0;
     background-size: auto 100%;
+
     /*adjust s value for speed*/
-    animation: animatedBackground 0s linear infinite; 
+    /* animation: animatedBackground 0s linear infinite;  */
     /* 500000ms */
+    /* transition: background .3s linear; */
 }
 
 
@@ -126,6 +131,8 @@ form {
     text-align: left;
 
     display: table;
+
+
 }
 
 .btn-long{
@@ -154,6 +161,15 @@ form {
     text-align: left;
 
     display: table;
+
+    /* box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8); */
+
+    -webkit-box-shadow: -1px 1px 5px 3px rgba(0, 0, 0, 0.159);
+    -moz-box-shadow: -1px 1px 5px 3px rgba(0, 0, 0, 0.159);
+    box-shadow: -1px 1px 5px 3px rgba(0, 0, 0, 0.159);
+
+    border-color: aqua;
+
 }
 
 .titlebox {
@@ -171,11 +187,16 @@ form {
     transform: rotate(-13deg);
 }
 
+
 .textbox {
     width: 80%;
-    margin: 0 auto;
-    margin-top: 10;
+    height: 600px;
+    margin: 100px auto 80px auto;
+    overflow: scroll;
+}
 
+.textbox::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -276,10 +297,13 @@ li:not(:last-child) {
 
 
 
+
+
 /* .panel {
-    display: none;
+    display: block;
 } */
 
+/* 
 .hide {
     display: none;
-}
+} */

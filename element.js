@@ -5,15 +5,15 @@ class MyNavbar extends HTMLElement {
         this.innerHTML = `
         <div class="navbar">
             <div class="buttons">
-            <span data-text="Home" class="tooltip">    <form onclick="bttnClicked('panel-1')"><input type="image" class="btn" src="icons/Furniture_NH_Inv_Icon.png" /></form>   </span> 
-            <span data-text="Education" class="tooltip"> <form onclick="bttnClicked('panel-2')"><input type="image" class="btn" src="icons/Pocketbook_NH_Inv_Icon.png" /></form>  </span> 
-            <span data-text="Work Exp." class="tooltip"> <form onclick="bttnClicked('panel-3')"><input type="image" class="btn" src="icons/Construction_Helmet_NH_Inv_Icon.png" /></form>  </span> 
-            <span data-text="Projects" class="tooltip"> <form onclick="bttnClicked('panel-4')"><input type="image" class="btn" src="icons/Dumbbell_NH_Inv_Icon.png" /></form>  </span> 
+            <span data-text="Home" class="tooltip">    <form onclick="return bttnClicked('panel-1')"><input type="image" class="btn" src="icons/Furniture_NH_Inv_Icon.png" /></form>   </span> 
+            <span data-text="Education" class="tooltip"> <form onclick="return bttnClicked('panel-2')"><input type="image" class="btn" src="icons/Pocketbook_NH_Inv_Icon.png" /></form>  </span> 
+            <span data-text="Work Exp." class="tooltip"> <form onclick="return bttnClicked('panel-3')"><input type="image" class="btn" src="icons/Construction_Helmet_NH_Inv_Icon.png" /></form>  </span> 
+            <span data-text="Projects" class="tooltip"> <form onclick="return bttnClicked('panel-4')"><input type="image" class="btn" src="icons/Dumbbell_NH_Inv_Icon.png" /></form>  </span> 
             <br>
-            <span data-text="Leadership" class="tooltip"> <form onclick="bttnClicked('panel-5')"><input type="image" class="btn" src="icons/Pennant_NH_Inv_Icon.png" /></form>  </span> 
-            <span data-text="Skills" class="tooltip"> <form onclick="bttnClicked('panel-6')"><input type="image" class="btn" src="icons/Slingshot_NH_Inv_Icon.png" />  </form>  </span> 
-            <span data-text="Contact" class="tooltip"> <form onclick="bttnClicked('panel-7')"><input type="image" class="btn" src="icons/Mailbox_NH_Inv_Icon.png" /></form> </span> 
-            <span data-text="About" class="tooltip"> <form onclick="bttnClicked('panel-8')"><input type="image" class="btn" src="icons/Accessory_NH_Inv_Icon.png" /></form>  </span>             
+            <span data-text="Leadership" class="tooltip"> <form onclick="return bttnClicked('panel-5')"><input type="image" class="btn" src="icons/Pennant_NH_Inv_Icon.png" /></form>  </span> 
+            <span data-text="Skills" class="tooltip"> <form onclick="return bttnClicked('panel-6')"><input type="image" class="btn" src="icons/Slingshot_NH_Inv_Icon.png" />  </form>  </span> 
+            <span data-text="Contact" class="tooltip"> <form onclick="return bttnClicked('panel-7')"><input type="image" class="btn" src="icons/Mailbox_NH_Inv_Icon.png" /></form> </span> 
+            <span data-text="About" class="tooltip"> <form onclick="return bttnClicked('panel-8')"><input type="image" class="btn" src="icons/Accessory_NH_Inv_Icon.png" /></form>  </span>             
             </div>
         </div>
         `
@@ -29,7 +29,6 @@ class Mypanelhome extends HTMLElement {
         <div class="panel-full" style="background-color: #FFCC59;">
           <div class="titlebox" style="background-color: #f66c21;"><p2>Home</p2></div>
           <div class="textbox">
-            <br><br><br><br>
             <p>Hello! My name is <mark style="color: #f66c21; background:none;">Cesar Fuentes</mark>. I am a senior computer science student at Texas A&M University. <br><br> Have fun checking out my Animal Crossing inspired website!</p>
           </div>
         </div>  
@@ -46,7 +45,6 @@ class Mypaneleducation extends HTMLElement {
         <div class="panel-full" style="background-color: #86B049;">
           <div class="titlebox" style="background-color: #476930;"><p2>Education</p2></div>
           <div class="textbox">
-            <br><br><br><br>
             <p>
               Texas A&M University<br>
               B.S. in Computer Science<br>
@@ -83,7 +81,6 @@ class Mypanelwork extends HTMLElement {
         <div class="panel-full" style="background-color: #E090AD;">
           <div class="titlebox" style="background-color: #039F9B;"><p2>Work Exp.</p2></div>
           <div class="textbox">
-            <br><br><br><br>
             <p>
               Publicis Sapient <br>
               Software Engineering Intern  <br>
@@ -112,7 +109,6 @@ class Mypanelprojects extends HTMLElement {
         <div class="panel-partial" style="background-color: #6CC0DB;">
           <div class="titlebox" style="background-color: #3679B6;"><p2>Projects</p2></div>
           <div class="textbox">
-            <br><br><br><br>
             <p>
               Crowd-Sourced Recommendation System <br>
               Group Project   <br>
@@ -143,7 +139,6 @@ class Mypanelleader extends HTMLElement {
         <div class="panel-partial" style="background-color: #3679B6;">
           <div class="titlebox" style="background-color: #FFB703;"><p2>Leadership</p2></div>
           <div class="textbox">
-            <br><br><br><br>
             <p>
               UNICEF at Texas A&M<br>
               President<br>
@@ -174,7 +169,6 @@ class Mypanelskills extends HTMLElement {
         <div class="panel-full" style="background-color: #FFCC59;">
           <div class="titlebox" style="background-color: #F66C21;"><p2>Skills</p2></div>
           <div class="textbox">
-          <br><br><br><br>
           <p>
           <mark style="color: #F66C21; background:none;">Programming Languages: </mark><br>
           C++, Java, Swift, Python, HTML, JavaScript, CSS, Ruby (PHP and R?)<br><br>
