@@ -1,4 +1,3 @@
-
 function bttnClicked(panelID) {
   // TODO: change character animation
   // TODO: page animation from top

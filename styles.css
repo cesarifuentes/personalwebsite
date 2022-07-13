@@ -1,4 +1,4 @@
-/* CSS variables ------------------------------------------------- */
+/* Global Styles ------------------------------------------------- */
 
 html{ 
     -o-user-select: none;
@@ -13,20 +13,55 @@ p,a,h1,h2,h3,h4,h5,h6,div,br,li,td,article{
     user-select: text;
 }
 
-
-
-/* global styles ------------------------------------------------- */
-
-:root {
-    /* --selected-buton: #2BA49F; */
+@font-face {
+    font-family: 'animalCrossing';
+    src: url(fonts/nintendoP_Humming-E_002pr.otf);
 }
-  
+
+p2 {
+    font-size: 31pt;
+    font-family: animalCrossing;
+    color: #FFF;
+}
+
+p, li, .tooltip {
+    font-size: 15pt;
+    font-family: animalCrossing;
+    color: #FFF;
+    line-height: 1.5;
+}
+
+li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
 body {
     margin: 0;
 }
 
+:root {
+    --outline-color: #636666;
+    --dark-color: #63666652;
+}
+
+/* Navigation Bar ------------------------------------------------- */
+
 form {
     display: inline;
+}
+
+@media only screen and (max-width: 1436px) {
+
+    .left-side {  
+        width: 100%; 
+        right: 0%; 
+    }
+    
+    .right-side {  
+        width: 0%; 
+        display: none;
+    }    
+
 }
 
 .navbar {
@@ -38,8 +73,6 @@ form {
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
-
-
 }
 
 .buttons {
@@ -47,7 +80,6 @@ form {
     display:table-cell;
     vertical-align: middle;
 }
-
 
 .btn {
     height: 100px;
@@ -59,18 +91,56 @@ form {
 
 .btn:hover {
     background-color: #2BA49F;
-
-    /* TODO: change size slightly */
 }
-
 
 .btn:root {
     background-color: #2BA49F;
 }
 
+/* 
 
+.tooltip {
+    position:relative;
+}
 
+.tooltip:before {
+    content: attr(data-text);
+    position:absolute;
+    transform:translateX(-20%);
+    z-index: 1;
+    top: 50%;
+    margin-top:10px;
+    width:200px;
+    padding:10px;
+    border-radius:10px;
+    background:#2BA49F;
+    color: #fff;
+    text-align:center;
+    display:none;
+}
 
+.tooltip:hover:before {
+    display:block;
+}
+
+.tooltip:after {
+    content: "";
+    position: absolute;
+    margin-left:12px;
+    top:50%;
+    transform:translateY(-50%);
+    border: 50px solid #000;
+    border-color: transparent transparent #2BA49F transparent;
+    display:none;
+} 
+
+.tooltip:hover:before, .tooltip:hover:after {
+    display:block;
+} 
+
+*/
+
+/* Panels ------------------------------------------------- */
 
 .left-side {  
     position: absolute;
@@ -78,9 +148,6 @@ form {
     right: 50%; 
     width: 50%; 
     height: 100%;
-    /* background-position: 0 0; 
-    background-repeat: no-repeat; 
-    background-size: cover; */
 }
 
 .right-side {  
@@ -100,13 +167,11 @@ form {
     background-repeat: repeat;
     background-position: 0 0;
     background-size: auto 100%;
-
     /*adjust s value for speed*/
-    /* animation: animatedBackground 0s linear infinite;  */
+    /* animation: animatedBackground 500000ms linear infinite;  */
     /* 500000ms */
     /* transition: background .3s linear; */
 }
-
 
 @keyframes animatedBackground {
     from {
@@ -116,8 +181,6 @@ form {
         background-position: -1000px;
     }
 }
-
-
 
 .panel-partial {
     width: 80%;
@@ -129,10 +192,7 @@ form {
     transform: translate(-50%, -50%);
     border-radius: 40px;
     text-align: left;
-
     display: table;
-
-
 }
 
 .btn-long{
@@ -145,11 +205,7 @@ form {
     line-height: 100px;  
 }
 
-
-
 .panel-full {
-    /* // opacity: 0.91; */
-
     width: 80%;
     height: 80%;
     position: absolute;
@@ -159,17 +215,10 @@ form {
     transform: translate(-50%, -50%);
     border-radius: 40px;
     text-align: left;
-
     display: table;
-
-    /* box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8); */
-
-    -webkit-box-shadow: -1px 1px 5px 3px rgba(0, 0, 0, 0.159);
-    -moz-box-shadow: -1px 1px 5px 3px rgba(0, 0, 0, 0.159);
-    box-shadow: -1px 1px 5px 3px rgba(0, 0, 0, 0.159);
-
-    border-color: aqua;
-
+    filter: drop-shadow(0 0 10px rgba(51, 51, 51, 0.228));
+    /* 0 0 100px */
+    /* drop-shadow(0 0 100px var(--dark-color));  */
 }
 
 .titlebox {
@@ -180,13 +229,11 @@ form {
     text-align: center;
     vertical-align: middle;
     line-height: 100px;  
-
     position: absolute;
     left: -40px;
     top: -40px;
     transform: rotate(-13deg);
 }
-
 
 .textbox {
     width: 80%;
@@ -199,30 +246,7 @@ form {
     display: none;
 }
 
-
-
-
-
-@font-face {
-    font-family: 'animalCrossing';
-    src: url(fonts/nintendoP_Humming-E_002pr.otf);
-}
-
-
-
-p2 {
-    font-size: 31pt;
-    font-family: animalCrossing;
-    color: #FFF;
-}
-
-p, li, .tooltip {
-    font-size: 15pt;
-    font-family: animalCrossing;
-    color: #FFF;
-    line-height: 1.5;
-}
-
+/* Character Animations ------------------------------------------------- */
 
 .animation {
     display: block;
@@ -231,79 +255,3 @@ p, li, .tooltip {
     background: url("animations/clapping.gif") no-repeat center center;
     margin: auto;
 }
-
-
-
-
-/* NAVIGATION BAR ------------------------------------------------- */
-
-.tooltip {
-    position:relative; /* making the .tooltip span a container for the tooltip text */
-}
-
-.tooltip:before {
-    content: attr(data-text); /* here's the magic */
-    position:absolute;
-    transform:translateX(-20%);
-    z-index: 1;
-    top: 50%;
-
-    margin-top:10px;
-
-    width:200px;
-    padding:10px;
-    border-radius:10px;
-    background:#2BA49F;
-    color: #fff;
-    text-align:center;
-    display:none;
-  }
-
-  .tooltip:hover:before {
-    display:block;
-  }
-
-  .tooltip:after {
-    content: "";
-    position: absolute;
-    
-    /* position tooltip correctly */
-    /* transform:translateX(20%); */
-    /* left:100%; */
-    margin-left:12px;
-
-    /* vertically center */
-    top:50%;
-    transform:translateY(-50%);
-
-
-   
-    /* the arrow */
-    border: 50px solid #000;
-    border-color: transparent transparent #2BA49F transparent;
-    
-    display:none;
-  }
-  .tooltip:hover:before, .tooltip:hover:after {
-    display:block;
-  }
-
-
-
-
-li:not(:last-child) {
-    margin-bottom: 20px;
-}
-
-
-
-
-
-/* .panel {
-    display: block;
-} */
-
-/* 
-.hide {
-    display: none;
-} */
