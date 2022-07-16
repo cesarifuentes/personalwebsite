@@ -1,257 +1,101 @@
 /* Global Styles ------------------------------------------------- */
 
-html{ 
-    -o-user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    user-select: none; 
-}
-p,a,h1,h2,h3,h4,h5,h6,div,br,li,td,article{
-    -o-user-select: text;
-    -moz-user-select: text;
-    -webkit-user-select: text;
-    user-select: text;
+:root {
+    --wallpaper-color: #f4f4f2;
+    --orange-color: #ed4a29;
+    --black-color: #212529;
 }
 
 @font-face {
-    font-family: 'animalCrossing';
-    src: url(fonts/nintendoP_Humming-E_002pr.otf);
+    font-family: 'roboto-light';
+    src: url(fonts/Roboto-Light.ttf);
 }
 
-p2 {
-    font-size: 31pt;
-    font-family: animalCrossing;
-    color: #FFF;
+@font-face {
+    font-family: 'roboto-thin';
+    src: url(fonts/Roboto-Thin.ttf);
 }
 
-p, li, .tooltip {
-    font-size: 15pt;
-    font-family: animalCrossing;
-    color: #FFF;
-    line-height: 1.5;
+@font-face {
+    font-family: 'migra-eb';
+    src: url(fonts/Migra-Extrabold.otf);
 }
 
-li:not(:last-child) {
-    margin-bottom: 20px;
+@font-face {
+    font-family: 'inter-el';
+    src: url(fonts/Inter-ExtraLight.ttf);
 }
 
 body {
-    margin: 0;
+    margin: 0 !important;
+    background-color: var(--wallpaper-color) !important;
+    font-size: 12pt !important;
+    font-family: roboto-thin !important;
 }
 
-:root {
-    --outline-color: #636666;
-    --dark-color: #63666652;
+
+
+h6 {
+    font-family: inter-el;
+    font-size: 15pt !important;
 }
+
+h2 {
+    font-family: migra-eb;
+    font-size: 50pt !important;
+}
+
+p {
+    font-family: roboto-thin !important;
+    font-size: 15pt !important;
+}
+
+
+    /* font-size: 31pt;
+    font-family: animalCrossing;
+    color: #FFF; */
 
 /* Navigation Bar ------------------------------------------------- */
 
-form {
-    display: inline;
-}
-
-@media only screen and (max-width: 1436px) {
-
-    .left-side {  
-        width: 100%; 
-        right: 0%; 
-    }
-    
-    .right-side {  
-        width: 0%; 
-        display: none;
-    }    
-
-}
-
-.navbar {
-    width: 650px;
-    height: 270px;
-    background-color: #FFFAE4;
-    border-radius: 200px;
-    display: table;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.buttons {
-    text-align:center;
-    display:table-cell;
-    vertical-align: middle;
-}
-
-.btn {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    background-color: #EDE3CA;
-    margin: 10px;
-}
-
-.btn:hover {
-    background-color: #2BA49F;
-}
-
-.btn:root {
-    background-color: #2BA49F;
-}
-
-/* 
-
-.tooltip {
-    position:relative;
-}
-
-.tooltip:before {
-    content: attr(data-text);
-    position:absolute;
-    transform:translateX(-20%);
-    z-index: 1;
-    top: 50%;
-    margin-top:10px;
-    width:200px;
-    padding:10px;
-    border-radius:10px;
-    background:#2BA49F;
-    color: #fff;
-    text-align:center;
-    display:none;
-}
-
-.tooltip:hover:before {
-    display:block;
-}
-
-.tooltip:after {
-    content: "";
-    position: absolute;
-    margin-left:12px;
-    top:50%;
-    transform:translateY(-50%);
-    border: 50px solid #000;
-    border-color: transparent transparent #2BA49F transparent;
-    display:none;
-} 
-
-.tooltip:hover:before, .tooltip:hover:after {
-    display:block;
-} 
-
-*/
-
-/* Panels ------------------------------------------------- */
-
-.left-side {  
-    position: absolute;
-    top: 0;
-    right: 50%; 
-    width: 50%; 
-    height: 100%;
-}
-
-.right-side {  
-    position: absolute;
-    top: 0;
-    left: 50%; 
-    width: 50%; 
-    height: 100%;
-}
-
-.wallpaper {  
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-repeat: repeat;
-    background-position: 0 0;
-    background-size: auto 100%;
-    /*adjust s value for speed*/
-    /* animation: animatedBackground 500000ms linear infinite;  */
-    /* 500000ms */
-    /* transition: background .3s linear; */
-}
-
-@keyframes animatedBackground {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: -1000px;
+@media (min-width: 768px) {
+    .navbar-brand.abs
+    {
+        position: absolute;
+        width: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
     }
 }
 
-.panel-partial {
-    width: 80%;
-    height: 70%;
+.navbar .navbar-nav .nav-link{
+    color: var(--black-color);
+}
+
+.navbar .navbar-nav .nav-link:hover{
+    color: var(--orange-color);
+}
+
+.brand {
+    color: var(--black-color);
+
+    /* margin: 0;
     position: absolute;
-    left: 50%;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    border-radius: 40px;
-    text-align: left;
-    display: table;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); */
 }
 
-.btn-long{
-    opacity: 1;
-    width: 300px;
-    height: 100px;
-    border-radius: 200px;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 100px;  
+.brand:hover {
+    color: var(--orange-color);
 }
 
-.panel-full {
-    width: 80%;
-    height: 80%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    border-radius: 40px;
-    text-align: left;
-    display: table;
-    filter: drop-shadow(0 0 10px rgba(51, 51, 51, 0.228));
-    /* 0 0 100px */
-    /* drop-shadow(0 0 100px var(--dark-color));  */
+/* HOME ------------------------------------------------- */
+
+.card {
+    /* -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter:         drop-shadow(5px 5px 5px #222);  */
+    /* width: 400px;
+    height: 400px; */
 }
 
-.titlebox {
-    opacity: 1;
-    width: 300px;
-    height: 100px;
-    border-radius: 200px;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 100px;  
-    position: absolute;
-    left: -40px;
-    top: -40px;
-    transform: rotate(-13deg);
-}
-
-.textbox {
-    width: 80%;
-    height: 600px;
-    margin: 100px auto 80px auto;
-    overflow: scroll;
-}
-
-.textbox::-webkit-scrollbar {
-    display: none;
-}
-
-/* Character Animations ------------------------------------------------- */
-
-.animation {
-    display: block;
-    height: 502px;
-    width: 522px;
-    background: url("animations/clapping.gif") no-repeat center center;
-    margin: auto;
-}
