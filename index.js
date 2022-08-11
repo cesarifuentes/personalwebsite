@@ -4,7 +4,7 @@ class MyNavbar extends HTMLElement {
       this.innerHTML = `
       <nav class="navbar navbar-expand-md navbar-dark">
       <div class="container-fluid">
-          <a class="navbar-brand abs" href="#"><ion-icon class="brand" name="bug" size="large"></ion-icon></a>
+          
           <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar">
               <span class="navbar-toggler-icon">
                 <ion-icon name="menu" size="large"></ion-icon>
@@ -31,4 +31,14 @@ class MyNavbar extends HTMLElement {
 }
 customElements.define('navbar-template', MyNavbar)
 
-    
+
+class DownloadButton extends HTMLElement {
+  // called every time this element is connected to a document
+  connectedCallback() {
+      this.innerHTML = `
+      <a class="resume-button" href="download/resume.png" download="resume-cesarfuentes">
+      <ion-icon name="download"></ion-icon>Download
+      </a>`
+  }
+}
+customElements.define('downlooad-template', DownloadButton)
