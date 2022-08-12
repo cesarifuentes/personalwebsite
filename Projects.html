@@ -6,6 +6,7 @@
     <title>Cesar Fuentes</title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="index.js"></script>
+    <script src="loadProjects.js"></script> 
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
@@ -13,23 +14,21 @@
     <!-- Icons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <!-- TODO: remove tilter -->
-
+    <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+    <!-- TODO: remove tilter -->
+
   </head>
-  <body>
+  <body onload="optiiShow()">
 
     <navbar-template></navbar-template>
 
-    <h2 style="text-align: center;">Projects</h2>
-
+    <h2 style="text-align:center;">Projects</h2>   
 
     <div class="projectContentBox">
 
-
       <div class="projectList">
-
         <ol class="list-group" id="list-tab" role="tablist">
 
           <li id="optii" class="list-group-item d-flex justify-content-between align-items-start list-group-item-action active" data-bs-toggle="list">
@@ -48,120 +47,50 @@
             <span class="badge bg-school rounded-pill">School</span>
           </li>
 
-          <!-- <li class="list-group-item d-flex justify-content-between align-items-start list-group-item-action" data-bs-toggle="list">
-            <div class="ms-2 me-auto">
-              <div class="fw-bold">LlamaLlama</div>
-              OpenGL Visualizer
-            </div>
-            <span class="badge bg-personal rounded-pill">Personal</span>
-          </li> -->
-
-          <!-- <li class="list-group-item d-flex justify-content-between align-items-start list-group-item-action" data-bs-toggle="list">
+          <li id="replace" class="list-group-item d-flex justify-content-between align-items-start list-group-item-action" data-bs-toggle="list">
             <div class="ms-2 me-auto">
               <div class="fw-bold">ReplaceMe</div>
               iOS Reminder Application
             </div>
             <span class="badge bg-personal rounded-pill">Personal</span>
-          </li> -->
+          </li>
 
         </ol>
 
       </div>
 
-
       <div class="projectDisplay">
-
-        <div class="project-content" id="project-content-optii" style="display: block;" >
-          <h6 id="project-date">Houston, Texas • July 2022</h6>
-          <h3 id="project-desc">Optimization Engine Interface</h3>
-          <h6 id="project-title"></h6> <!-- <h6>Chevron Corporation</h6> -->
-          <div id="project-languages">
-            <ion-icon name="logo-angular" size="large"></ion-icon>
-            <ion-icon name="logo-nodejs" size="large"></ion-icon>
-            <ion-icon name="logo-python" size="large"></ion-icon>
-            <ion-icon name="server" size="large"></ion-icon>
-          </div>
-          <br><br>
-          <ul id="project-list">
-            <li>Created a UI that can allows users to select an optimization LP model, perform what-if analysis, and visualize the results.</li>
-            <li>Created a UI that can allows users to select an optimization LP model, perform what-if analysis, and visualize the results.</li>
-            <li>Created a UI that can allows users to select an optimization LP model, perform what-if analysis, and visualize the results.</li>
-          </ul>          
-          <br><br>
-          <div id="project-links">
-            <a href="https://google.com" target="_blank"><ion-icon class="linkButton" name="logo-github" size="large"></ion-icon></a>
-            <a href="https://google.com" target="_blank"><ion-icon class="linkButton" name="open" size="large"></ion-icon></a>
-          </div>
-          <div id="project-image">
-            <img class="tablet" src="photos/optii.png">
-          </div>
-        </div>
-        
-        <div class="project-content" id="project-content-spotify" style="display: none;">
-          <h6 id="project-date">College Station, Texas • Nov 2021</h6>
-          <h3 id="project-desc">Spotify Playlist Organizer</h3>
+        <div id="project-content">
+          <h6 id="project-date"></h6>
+          <h3 id="project-desc"></h3>
           <h6 id="project-title"></h6>
-          <div id="project-languages">
-            <ion-icon name="logo-html5" size="large"></ion-icon>
-            <ion-icon name="logo-javascript" size="large"></ion-icon>
-            <ion-icon name="logo-css3" size="large"></ion-icon>
-            <ion-icon name="logo-python" size="large"></ion-icon>
-            <ion-icon name="server" size="large"></ion-icon>
-          </div>
+          <div id="project-languages"></div>
           <br><br>
-          <ul id="project-list">
-              <li>Designed and verified a publicly hosted web application that integrates multiple APIs to let Spotify users create custom playlists..</li>
-              <li>Employed multiple aspects of accessibility into a software product.</li>
-              <li>Conducted user studies and adapted a software product based on user feedback.</li>
-          </ul>          
+          <ul id="project-list"></ul>          
           <br><br>
-          <div id="project-links">
-            <a href="https://google.com" target="_blank"><ion-icon class="linkButton" name="logo-github" size="large"></ion-icon></a>
-            <a href="https://google.com" target="_blank"><ion-icon class="linkButton" name="open" size="large"></ion-icon></a>
-          </div>
-          <div id="project-image">
-            <img class="tablet" src="photos/spotify.png">
-          </div>
+          <div id="project-links"></div>
+          <div id="project-image"></div>
         </div>
-
       </div>
-
-
 
     </div>
 
-    
+
+
     <download-template></download-template>
 
   </body>
 </html>
 
-
 <script>
-
 $(document).ready(function() {
   $('#optii').on("click", optiiShow);
   $('#spotify').on("click", spotifyShow);
+  $('#replace').on("click", replaceShow);
 });
-
-function optiiShow(){
-  hideProjectContent();
-  document.getElementById("project-content-optii").style.display = 'block';
-  
-};
-
-function spotifyShow(){
-  hideProjectContent();
-  document.getElementById("project-content-spotify").style.display = 'block';
-};
-
-function hideProjectContent(){
-  var elements = document.getElementsByClassName("project-content")
-  for (var i = 0; i < elements.length; i++){
-      elements[i].style.display = 'none';
-  }
-}
-
 </script>
 
 
+<!-- 
+<ion-icon src="./assets/mysql.svg" size="large" style="color: var(--black-color);"></ion-icon>
+<ion-icon src="./assets/swift.svg" size="large"></ion-icon> -->

@@ -58,8 +58,13 @@ h3 {
     font-size: 25pt !important;
 }
 
-h2 {
+/* h3 {
     font-family: migra-eb;
+    font-size: 15pt !important;
+} */
+
+h2 {
+    font-family: roboto-regular;
     font-size: 50pt !important;
 }
 
@@ -189,34 +194,90 @@ p {
     filter:         drop-shadow(0px 0px 15px #222); 
 }
 
-
-
-
-
-
-/* Skills ------------------------------------------------- */
-
-.skillYears {
-    /* display: inline; */
-    height: 30px;
-    width: 30px;
-    line-height: 30px;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    background-color: var(--orange-color);
-    color: white;
-    text-align: center;
-    font-size: 12pt !important;
+.home {
+    width : 50%;
+    float: left;
+    margin-top: 90px;
+    margin-left: 50px;
 }
 
 
-.col-sm {
+/* EDUCATION ------------------------------------------------- */
+
+/* .col-sm {
     background-color: #beb0ba;
     border-radius: 30px; 
-
     height: 700px;
+} */
 
+.education {
+    width : 50%;
+    float: right;
+    margin-top: 90px;
 }
+
+.books {
+    position: absolute; 
+    bottom: -50px; 
+    left: -10px;
+}
+
+
+/* EXPERIENCE ------------------------------------------------- */
+
+.sapient {
+    position: absolute; 
+    top: 0px;
+    right: -30px;
+    z-index: -10;
+}
+
+
+
+
+
+
+
+
+
+
+/* SKILLS ------------------------------------------------- */
+
+.right-half {
+    width : 50%;
+    float: right;
+    margin-top: 90px;
+}
+
+.pill {
+    color: #ddd;
+    border: none;
+    background-color: var(--black-color);
+    padding: 5px 13px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+.pill:hover {
+    background-color: var(--orange-color);
+}
+
+
+
+/* 
+.popover-title {
+    font-size: 12px;
+    font: roboto-light;
+}
+
+.popover-content {
+    font-size: 12px;
+    font: roboto-light;
+} */
 
 
 
@@ -285,3 +346,28 @@ p {
 .linkButton:hover{
     color: var(--orange-color);
 }
+
+
+/* .image {
+    background: url('../assets/image.svg');
+} */
+
+.custom-ionicon {
+    width: 32px;
+    height: 32px;
+
+    box-sizing: content-box;
+    color: rgb(33, 37, 41);
+    contain: strict;
+    display: inline-block;
+    fill: rgb(33, 37, 41);
+    font-family: roboto-thin;
+    font-size: 32px;
+    font-weight: 400;
+    height: 32px;
+    line-height: 48px;
+    text-align: start;
+    visibility: visible;
+    width: 32px;
+}
+

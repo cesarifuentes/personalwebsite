@@ -31,7 +31,6 @@ class MyNavbar extends HTMLElement {
 }
 customElements.define('navbar-template', MyNavbar)
 
-
 class DownloadButton extends HTMLElement {
   // called every time this element is connected to a document
   connectedCallback() {
@@ -42,3 +41,6 @@ class DownloadButton extends HTMLElement {
   }
 }
 customElements.define('downlooad-template', DownloadButton)
+
+
+// DYNAMIC CONTENT

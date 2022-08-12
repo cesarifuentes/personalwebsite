@@ -13,57 +13,62 @@
     <!-- Icons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <!-- Tilter -->
-    <script type="text/javascript" src="vanilla-tilt.js"></script>
+
+
   </head>
   <body>
 
     <navbar-template></navbar-template>
 
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-sm">
+    <div class="right-half">
+      <h2>Skills</h2>
+      <br>
+      
+      <h5>Programming Languages:</h5>
 
-        </div>
+      <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+      sagittis lacus vel augue laoreet rutrum faucibus.">
+        Popover on bottom
+      </button>
 
-        <div class="col-sm">
-
-          <!-- <h6>President • SEPT 2019 - Present</h6> -->
-            <h2>Skills</h2>
-            Hover over each to see the # of years I've used these.            
-            <br><br><br>
-            
-            <h5>Programming Languages:</h5>
-            C++, Java, Python, HTML, JavaScript, CSS, Ruby, Swift<br><br>
-            <h5>Database Management:</h5>
-            MySQL, <br><br>
-            <h5>Cloud-Based Technologies:</h5>
-            Azure, Docker, Google (AWS)<br><br>
-            <h5>Open Source Tools:</h5>
-            Kubernetes, Jenkins<br><br>
-            <h5>Frameworks:</h5>
-            Angular<br><br>
-            <h5>Technologies:</h5>
-            Jira, Git<br><br>
-            <h5>Methodologies:</h5>
-            Agile/Scrum
+      <button type="button" data-bs-toggle="popover" title="Popover title" data-bs-content="Here's some amazing content.">Click to toggle popover</button>
 
 
-            <br><br><br>
-            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<em>3 years</em> <u>test</u> <b>test</b>">
-              Python
-            </button>
+      <!-- <button type="button" class="pill">Java</button>
+      <button type="button" class="pill">Python</button>
+      <button type="button" class="pill">HTML</button>
+      <button type="button" class="pill">JavaScript</button>
+      <button type="button" class="pill">CSS</button>
+      <button type="button" class="pill">Ruby</button>
+      <button type="button" class="pill">Swift</button> -->
+      <br><br>
+<!-- 
+      <h5>Database Management:</h5>
+      <button class="pill" data-bs-toggle="popover" data-bs-title="3 Years" data-bs-content="17 Projects">MySQL</button>
+      <br><br>
 
-            <!-- <br><br>
-            <div class="skillYears">12</div> -->
+      <h5>Cloud-Based Technologies:</h5>
+      <span class="pill">Azure</span>
+      <span class="pill">Docker</span>
+      <br><br>
 
-            <!-- Todo: MongoDB, React -->
-            <!-- <ion-icon name="logo-apple"></ion-icon>
-            <ion-icon name="logo-windows"></ion-icon>  -->
+      <h5>Open Source Tools:</h5>
+      <span class="pill">Kubernetes</span>
+      <span class="pill">Jenkins</span>
+      <br><br>
 
-        </div>
+      <h5>Frameworks:</h5>
+      <span class="pill">Angular</span>
+      <br><br>
 
-      </div>
+      <h5>Technologies:</h5>
+      <span class="pill">Jira</span>
+      <span class="pill">Git</span>
+      <br><br>
+
+      <h5>Methodologies:</h5>
+      <span class="pill">Agile/Scrum</span> -->
+
     </div>
 
 
@@ -71,6 +76,12 @@
 
   </body>
 </html>
+
+
+
+            <!-- Todo: MongoDB, React -->
+            <!-- <ion-icon name="logo-apple"></ion-icon>
+            <ion-icon name="logo-windows"></ion-icon>  -->
 
 
 
@@ -87,6 +98,8 @@
 <ion-icon name="logo-nodejs"></ion-icon>
 <ion-icon name="logo-docker"></ion-icon> -->
 
-
-
-
+<script>
+  $(document).ready(function(){
+      $('[data-bs-toggle="popover"]').popover();  
+  });
+  </script>
